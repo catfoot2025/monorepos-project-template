@@ -205,3 +205,20 @@ dist
 .eslintcache
 
 ```
+
+## 添加.gitattributes
+
+通过添加.gitattributes属性来控制git的行为，提升提交操作的效率
+
+```
+# 解决跨平台换行符冲突（如 Windows 开发的文件提交到 Unix 仓库后出现 ^M 符号），确保代码在不同系统中显示一致。
+* text=auto eol=lf
+# 告诉 Git 的语言检测工具（Linguist）“不要检测此类文件的语言类型”。通过扩展名可以判断出来
+*.ts linguist-detectable=false
+*.css linguist-detectable=false
+*.scss linguist-detectable=false
+# 需要进行检测比如某个文件内容是jsx语法，但是以js后缀名结尾
+*.js linguist-detectable=true
+*.vue linguist-detectable=true
+```
+
