@@ -223,3 +223,107 @@ dist
 *.js linguist-detectable=true
 *.vue linguist-detectable=true
 ```
+
+## 添加暂存区文件获取
+
+为了保证每次提交符合项目规范，需要对暂存区代码进行相应处理。lint-staged的作用就是获取暂存区文件，然后将这些文件作为参数传递给其他程序，让其他程序进一步进行处理。
+
+### 网址
+
+https://github.com/lint-staged/lint-staged
+
+### 安装lint-staged
+
+```bash
+pnpm add lint-staged -D
+```
+
+### 配置
+
+在项目的根目录在创建lint-staged.config.mjs
+
+```js
+export default {
+  '*.{vue,js,ts,jsx,tsx,md,json}': ['prettier --write'],
+}
+```
+
+意思是获取所有暂存区后缀为vue,js,ts,jsx,tsx,md,json的文件，然后将它交给prettier进行处理。
+
+## 添加提交信息约束
+
+规范化的提交信息可以让人清晰明了的了解文件发生的变化。为此专门制定了提交规范和检测提交信息的程序。其中commitlint就是用来做这件事情的。
+
+### 网址
+
+commitlint程序的网址
+
+https://commitlint.js.org/
+
+规范网址
+
+https://www.conventionalcommits.org/en/v1.0.0/
+
+### 安装
+
+安装commitlint及config-conventional规范
+
+```
+pnpm add -D @commitlint/cli @commitlint/config-conventional
+```
+
+## 规范描述
+
+```
+type(scope?): subject
+body?
+footer?
+```
+
+其中@commitlint/config-conventional
+
+## 添加git提交钩子函数
+
+### 网址
+
+https://typicode.github.io/husky/get-started.html
+
+### 安装husky
+
+```bash
+pnpm add --save-dev husky
+```
+
+### 初始化
+
+执行如下命令
+
+```bash
+pnpm exec husky init
+```
+
+执行 该命令后，Husky 会自动完成以下操作：
+
+- 在项目根目录创建 `.husky` 目录（存储 Husky 的配置和自定义钩子脚本）；
+- 将 Husky 注册为 Git 钩子的管理器（修改 `.git/config`）；
+- 在 `.git/hooks` 目录下创建符号链接，指向 `.husky` 目录中的实际钩子脚本（如 `pre-commit` → `.husky/pre-commit`）。
+
+### 添加钩子函数
+
+在.husky文件夹，添加如下文件
+
+**pre-commit**
+
+```bash
+pnpm exec lint-staged
+```
+
+当用户在执行提交操作时例如执行了git commit -m "xxx"，git会调用husky注册的回调函数，将首先执行pre-commit。此时将会执行`pnpm exec lint-staged`。
+
+**commit-msg**
+
+```bash
+pnpm exec commitlint --config commitlint.config.mjs --edit "${1}"
+```
+
+对于用户提交的commit-msg，将会执行commit-msg钩子函数。该命令将会执行commitlint命令，该命令读取commitlint.config.mjs配置文件，并且将用户执行commit -m后面的文本作为参数传递给commitlint。
