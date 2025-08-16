@@ -135,7 +135,7 @@ const sub = (a, b) => {
 
 发现双引号好并没有变成单引号，并且在idea中对.editorconfig中的`quote_type = single`有警告，提示idea不支持该选项。也就是说不同编辑器对.editorconfig规范支持的不一样。这时候就需要请出一个对代码风格规范更强大的工具了，它就是prettier。
 
-# 添加prettier
+# 添加代码风格支持
 
 ## 安装prettier
 
@@ -178,7 +178,9 @@ pnpm-lock.yaml
 
 配置完成后，在vscode或者idea中进行保存操作时会自动对文件进行格式化。
 
-# 添加.gitignore
+# 添加git支持
+
+## 添加.gitignore
 
 ```
 # Editor directories and files
@@ -221,4 +223,3 @@ dist
 *.js linguist-detectable=true
 *.vue linguist-detectable=true
 ```
-

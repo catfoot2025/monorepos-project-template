@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "cz": "czg",
-    "format": "prettier --write --cache ."
+    "format": "prettier --write --cache .",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.13.0",
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "cz-git": "^1.12.0",
     "czg": "^1.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
     "prettier": "^3.6.2"
   },
   "config": {

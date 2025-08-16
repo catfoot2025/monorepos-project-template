@@ -1,0 +1,51 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16" pages="2">
+  <diagram name="第 1 页" id="2_tWX-NVZcp97fX0ro8B">
+    <mxGraphModel dx="1106" dy="810" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DKE9h43utdRWLnukl2JS-1" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="118" width="722" height="467" as="geometry" />
+        </mxCell>
+        <mxCell id="DKE9h43utdRWLnukl2JS-2" value="工作区" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="79" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DKE9h43utdRWLnukl2JS-3" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="103" y="160" width="297" height="149" as="geometry" />
+        </mxCell>
+        <mxCell id="DKE9h43utdRWLnukl2JS-4" value="git 暂存区" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="101" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DKE9h43utdRWLnukl2JS-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="428" y="160" width="296" height="406" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="10UvUHDm5uTAtVClEeIG" name="第 2 页">
+    <mxGraphModel dx="1106" dy="810" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YD9z37sPm3A0FDS3RYpU-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YD9z37sPm3A0FDS3RYpU-1" target="YD9z37sPm3A0FDS3RYpU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YD9z37sPm3A0FDS3RYpU-1" value="执行提交" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="174" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YD9z37sPm3A0FDS3RYpU-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YD9z37sPm3A0FDS3RYpU-2" target="YD9z37sPm3A0FDS3RYpU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YD9z37sPm3A0FDS3RYpU-2" value="pre-commit" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="74" y="314" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YD9z37sPm3A0FDS3RYpU-4" value="lint-stage" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="274" y="314" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YD9z37sPm3A0FDS3RYpU-6" value="获取暂存区文件，将这些文件交给其他模块处理" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="298" y="226" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

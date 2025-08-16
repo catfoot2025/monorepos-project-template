@@ -10,3 +10,7 @@ const sub = (a, b) => {
   const str1 = 'fdfdfd'
   return a - b
 }
+
+const div = (a, b) => {
+  return a / b
+}
