@@ -27,6 +27,7 @@ const scopes = [
   'ssr',
   'types',
   'deps',
+  'aaa',
 ]
 
 // execSync同步执行 shell 命令的方法
@@ -117,10 +118,10 @@ export default {
     ],
   },
   prompt: {
-    defaultScope: scopeComplete,
-    customScopesAlign: !scopeComplete ? 'top' : 'bottom',
-    defaultSubject: subjectComplete && `[${subjectComplete}] `,
-    allowCustomIssuePrefixs: false,
-    allowEmptyIssuePrefixs: false,
+    // defaultScope: scopeComplete,
+    // customScopesAlign: !scopeComplete ? 'top' : 'bottom',
+    // defaultSubject: subjectComplete && `[${subjectComplete}] `,
+    // allowCustomIssuePrefixs: false,
+    // allowEmptyIssuePrefixs: false,
   },
 }
