@@ -6,11 +6,9 @@ import fg from 'fast-glob'
 const getPackages = (packagePath) =>
   fg.sync('*', { cwd: packagePath, onlyDirectories: true })
 
-console.log(getPackages('.'))
-
 const scopes = [
-  ...getPackages('packages'),
-  ...getPackages('internal'),
+  // ...getPackages('packages'),
+  // ...getPackages('internal'),
   'docs',
   'play',
   'project',
@@ -27,7 +25,6 @@ const scopes = [
   'ssr',
   'types',
   'deps',
-  'aaa',
 ]
 
 // execSync同步执行 shell 命令的方法
@@ -62,6 +59,7 @@ export default {
      *      ^^^^^
      */
     'scope-enum': [2, 'always', scopes],
+    'scope-empty': [2, 'never'],
     /**
      * type[scope]: [function] description
      *
