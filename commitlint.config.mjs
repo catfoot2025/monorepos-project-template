@@ -40,7 +40,6 @@ const gitStatus = execSync('git status --porcelain || true')
   .trim()
   // 将字符串按换行符分割成数组
   .split('\n')
-console.log(gitStatus)
 
 const scopeComplete = gitStatus
   .find((r) => ~r.indexOf('M  packages'))
@@ -118,10 +117,10 @@ export default {
     ],
   },
   prompt: {
-    // defaultScope: scopeComplete,
-    // customScopesAlign: !scopeComplete ? 'top' : 'bottom',
-    // defaultSubject: subjectComplete && `[${subjectComplete}] `,
-    // allowCustomIssuePrefixs: false,
-    // allowEmptyIssuePrefixs: false,
+    defaultScope: 'ccc',
+    customScopesAlign: !scopeComplete ? 'top' : 'bottom',
+    defaultSubject: subjectComplete && `[${subjectComplete}] `,
+    allowCustomIssuePrefixs: false,
+    allowEmptyIssuePrefixs: false,
   },
 }
